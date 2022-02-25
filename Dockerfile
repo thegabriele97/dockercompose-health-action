@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-LABEL "com.github.actions.name"="Wait docker-compose healthy"
+LABEL "com.github.actions.name"="Wait Docker-Compose Healthy"
 LABEL "com.github.actions.description"="Very simple and small action to wait until all the services (given by docker-compose ps) are Up and Healthy!"
 LABEL "com.github.actions.icon"="activity"
 LABEL "com.github.actions.color"="red"

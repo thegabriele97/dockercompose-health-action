@@ -1,4 +1,4 @@
-name: 'Wait docker-compose healthy'
+name: 'Wait Docker-Compose Healthy'
 description: 'Very simple and small action to wait until all the services (given by docker-compose ps) are Up and Healthy!'
 author: 'La Greca Salvatore Gabriele @thegabriele97 <gabriele.lagreca@gmail.com>'
 # https://actions-cool.github.io/github-action-branding/

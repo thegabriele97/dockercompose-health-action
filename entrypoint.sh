@@ -1,14 +1,5 @@
 #!/bin/bash
 
-echo "content:"
-ls 
-
-cd ${INPUT_WORKDIR}
-
-echo "workdir: ${INPUT_WORKDIR}"
-echo "content:"
-ls 
-
 docker-compose ps
 docker-compose logs
 

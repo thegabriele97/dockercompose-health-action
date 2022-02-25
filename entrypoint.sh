@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ${INPUT_WORKDIR}
+
 docker-compose ps
 docker-compose logs
 

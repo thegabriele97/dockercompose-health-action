@@ -9,6 +9,9 @@ inputs:
   timeout:
     description: 'After timeout seconds, the wait process fails returning Status Code 1'
     required: true
+  workdir:
+    description: 'The directory where your docker-compose.yml is'
+    required: true
 runs: 
   using: 'docker'
   image: 'Dockerfile'

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd ${workdir}
+
 regx='\s*([Rr]unning|[uU]p) \(healthy\)'
 secs=${timeout}                           # Set interval (duration) in seconds.
 endTime=$(( $(date +%s) + secs )) # Calculate end time.

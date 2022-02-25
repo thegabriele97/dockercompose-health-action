@@ -1,0 +1,14 @@
+name: 'Wait docker-compose healthy'
+description: 'Very simple and small action to wait until all the services (given by docker-compose ps) are Up and Healthy!'
+author: 'La Greca Salvatore Gabriele @thegabriele97 <gabriele.lagreca@gmail.com>'
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: 'activity'
+  color: 'red'
+inputs:
+  timeout:
+    description: 'After timeout seconds, the wait process fails returning Status Code 1'
+    required: true
+runs: 
+  using: 'docker'
+  image: 'Dockerfile'

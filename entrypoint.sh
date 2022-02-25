@@ -2,6 +2,13 @@
 
 cd ${workdir}
 
+echo "workdir: ${workdir}"
+echo "content:"
+ls 
+
+docker-compose ps
+docker-compose logs
+
 regx='\s*([Rr]unning|[uU]p) \(healthy\)'
 secs=${timeout}                           # Set interval (duration) in seconds.
 endTime=$(( $(date +%s) + secs )) # Calculate end time.
@@ -19,6 +26,8 @@ while [ $(date +%s) -lt $endTime ]; do  # Loop until interval has elapsed.
     fi
     sleep 1
 done
+
 docker-compose ps
 docker-compose logs
+
 exit 1

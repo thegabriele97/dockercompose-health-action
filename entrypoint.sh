@@ -1,8 +1,11 @@
 #!/bin/bash
 
-cd ${workdir}
+echo "content:"
+ls 
 
-echo "workdir: ${workdir}"
+cd ${INPUT_WORKDIR}
+
+echo "workdir: ${INPUT_WORKDIR}"
 echo "content:"
 ls 
 
@@ -10,7 +13,7 @@ docker-compose ps
 docker-compose logs
 
 regx='\s*([Rr]unning|[uU]p) \(healthy\)'
-secs=${timeout}                           # Set interval (duration) in seconds.
+secs=${INPUT_TIMEOUT}                           # Set interval (duration) in seconds.
 endTime=$(( $(date +%s) + secs )) # Calculate end time.
 while [ $(date +%s) -lt $endTime ]; do  # Loop until interval has elapsed.
     cnt=2

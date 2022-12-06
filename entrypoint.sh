@@ -2,13 +2,13 @@
 
 cd ${INPUT_WORKDIR}
 
+docker-compose up -d --build
 docker-compose ps
 docker-compose logs
 
 begin_cnt=$(docker-compose ps | wc -l)
 if [[ $begin_cnt -eq 2 ]]; then
 	echo "No services found !?"
-	docker-compose up -d --build
 	echo "docker-compose ps:"
 	docker-compose ps
 	exit 2

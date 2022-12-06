@@ -6,6 +6,10 @@ docker-compose ps
 docker-compose logs
 
 begin_cnt=$(docker-compose ps | wc -l)
+if [[ $begin_cnt -eq 2 ]]; then
+	echo "No services found !?"
+	exit 2
+fi
 
 regx='\s*([Rr]unning|[uU]p) \(healthy\)'
 secs=${INPUT_TIMEOUT}                           # Set interval (duration) in seconds.
@@ -22,10 +26,6 @@ while [ $(date +%s) -lt $endTime ]; do  # Loop until interval has elapsed.
         echo ""
         exit 0
     fi
-	if [[ $cnt -eq 2 ]]; then
-		echo "No services found !?"
-		exit 1
-	fi
     sleep 1
 done
 

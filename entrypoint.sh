@@ -18,7 +18,7 @@ regx='\s*([Rr]unning|[uU]p) \(healthy\)'
 secs=${INPUT_TIMEOUT}                           # Set interval (duration) in seconds.
 endTime=$(( $(date +%s) + secs )) # Calculate end time.
 while [ $(date +%s) -lt $endTime ]; do  # Loop until interval has elapsed.
-    cnt=$begin_cnt
+    cnt=2
     while IFS= read -r line; do
         if [[ $line =~ $regx ]]; then
             cnt=$((cnt+1))

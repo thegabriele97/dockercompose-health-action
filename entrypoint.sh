@@ -8,8 +8,7 @@ docker-compose logs
 begin_cnt=$(docker-compose ps | wc -l)
 if [[ $begin_cnt -eq 2 ]]; then
 	echo "No services found !?"
-	echo "ls:"
-	ls -l
+	docker-compose up -d --build
 	echo "docker-compose ps:"
 	docker-compose ps
 	exit 2

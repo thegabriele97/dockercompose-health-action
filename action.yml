@@ -6,6 +6,10 @@ branding:
   icon: 'activity'
   color: 'red'
 inputs:
+  filename:
+    description: 'The docker-compose filename'
+    required: false
+    default: 'docker-compose.yml'
   timeout:
     description: 'After timeout seconds, the wait process fails returning Status Code 1'
     required: true

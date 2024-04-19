@@ -2,7 +2,7 @@
 
 This is a very simple action to wait until all the services given by Docker Compose are Up and Healthy before moving on in your workflow.
 
-It accepts two arguments:
+It accepts three arguments:
  - **filename**: The docker-compose filename. Default: 'docker-compose.yml'
  - **timeout**: After timeout seconds, the wait process fails returning Status Code 1
  - **workdir**: The directory where your docker-compose.yml is
